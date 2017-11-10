@@ -58,9 +58,6 @@ def rechardatabase(host, user, pwd, db, charset):
     cursor = db.cursor()
     cursor.execute("show tables")
 
-    rechartable(cursor, 'report_usersite', charset)
-    return
-
     tables = cursor.fetchall()
     for row in tables:
         tablename = row[0]
