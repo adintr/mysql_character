@@ -61,7 +61,7 @@ def rechardatabase(host, user, pwd, db, charset):
     tables = cursor.fetchall()
     for row in tables:
         tablename = row[0]
-        rechartable(cursor, tablename)
+        rechartable(cursor, tablename, charset)
 
     db.close()
 
